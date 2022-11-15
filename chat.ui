@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>chat</class>
+ <widget class="QDialog" name="chat">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1101</width>
+    <height>670</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLineEdit" name="le_message">
+   <property name="geometry">
+    <rect>
+     <x>335</x>
+     <y>470</y>
+     <width>301</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #dcdcdc;
+color: rgb(0, 0, 0);
+border: 2px solid ;
+  border-radius: 5px</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>23</x>
+     <y>56</y>
+     <width>711</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #dcdcdc;
+color: rgb(0, 0, 0);
+border: 2px solid ;
+  border-radius: 5px</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>470</y>
+     <width>56</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #dcdcdc;
+font: 9pt &quot;Bernard MT Condensed&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Pseudo</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>470</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #dcdcdc;
+font: 9pt &quot;Bernard MT Condensed&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Votre message</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>315</x>
+     <y>20</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #dcdcdc;
+font: 9pt &quot;Bernard MT Condensed&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Port du serveur</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_ip">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>20</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #dcdcdc;
+color: rgb(0, 0, 0);
+border: 2px solid ;
+  border-radius: 5px</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_envoyer">
+   <property name="geometry">
+    <rect>
+     <x>665</x>
+     <y>465</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: rgb(0, 0, 0);
+background:#dcdcdc;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color:#535353;
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>Envoyer</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_pseudo">
+   <property name="geometry">
+    <rect>
+     <x>75</x>
+     <y>470</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #dcdcdc;
+color: rgb(0, 0, 0);
+border: 2px solid ;
+  border-radius: 5px</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>20</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #dcdcdc;
+font: 9pt &quot;Bernard MT Condensed&quot;;</string>
+   </property>
+   <property name="text">
+    <string>IP du seveur</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_connexion">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>18</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: rgb(0, 0, 0);
+background:#dcdcdc;
+border: none;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+border: 2px solid ;
+border-radius: 8px;
+}
+QPushButton:hover {
+color:#fff;
+	background-color:#535353;
+border: none;
+}</string>
+   </property>
+   <property name="text">
+    <string>connexion</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_port">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>20</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #dcdcdc;
+color: rgb(0, 0, 0);
+border: 2px solid ;
+  border-radius: 5px</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

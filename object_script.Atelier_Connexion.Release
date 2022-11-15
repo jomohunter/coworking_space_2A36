@@ -1,0 +1,12 @@
+INPUT(
+./release\employe.o
+./release\login.o
+./release\main.o
+./release\mainwindow.o
+./release\connection.o
+./release\smtp.o
+./release\stmp.o
+./release\moc_login.o
+./release\moc_mainwindow.o
+./release\moc_smtp.o
+);
