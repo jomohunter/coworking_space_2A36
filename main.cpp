@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     bool test=c.createConnection();
     MainWindow w;
     login l;
+    menu me;
 
 
     if(test)

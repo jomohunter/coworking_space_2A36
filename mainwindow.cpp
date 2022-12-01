@@ -21,22 +21,74 @@
 #include <QPieSeries>
 #include <QChartView>
 #include "smtp.h"
+#include "arduino.h"
+
+using namespace std;
+
+void MainWindow::test(){
+    data="";
+             data=A.read_from_arduino();
 
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-ui(new Ui::MainWindow)
+    qDebug() << data ;
+    int D=data.toInt();
+    qDebug() << D ;
+    if (A.cherchercode(D) != -1){
+        qDebug() << "Writing to arduino" ;
+        A.write_to_arduino("1");
+        QString name = A.chercher(D);
+        qDebug() << name ;
+        QString nom = A.chercher(D) + "  est arrivé(e)";
+        QMessageBox msgBox;
+        msgBox.setText(nom);
+        msgBox.exec();
+    }
+    else{
+        A.write_to_arduino("F");
+        data= "";
+        QString name = A.chercher(D);
+        qDebug() << name ;
+        QString nom = "Quelqu'un a essayé d'entrer";
+        QMessageBox msgBox;
+        msgBox.setText(nom);
+        msgBox.exec();
+
+    }
+                       }
+
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-    ui->le_id->setValidator( new QIntValidator(111111,999999, this));
+    ui->le_id->setValidator( new QIntValidator(11111,99999, this));
     ui->le_salaire->setValidator( new QIntValidator(111111,99999, this));
     ui->le_prenom->setValidator(new QRegExpValidator(  QRegExp("[A-z]*")  ));
     ui->le_nom_2->setValidator(new QRegExpValidator(  QRegExp("[A-z]*")  ));
     ui->le_poste->setValidator(new QRegExpValidator(  QRegExp("[A-z]*")  ));
     ui->tableView->setModel(E.afficher());
 
+    qDebug()<<"start";
+
+
+    int ret=A.connect_arduino(); // lancer la connexion à arduino
+                     switch(ret){
+                     case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+
+
+                         break;
+                     case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+                        break;
+                     case(-1):qDebug() << "arduino is not available";
+                     }
+            QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(test()));
+
+                       // permet de lancer
+                      //le slot update_label suite à la reception du signal readyRead (reception des données).
 }
+
+
 
 MainWindow::~MainWindow()
 {

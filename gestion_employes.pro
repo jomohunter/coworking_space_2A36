@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql printsupport charts network
+QT       += core gui sql printsupport charts network serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,24 +25,29 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += console
 
 SOURCES += \
+    arduino.cpp \
     employe.cpp \
     login.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
+    menu.cpp \
     smtp.cpp \
 
 
 HEADERS += \
+    arduino.h \
     employe.h \
     login.h \
         mainwindow.h \
     connection.h \
+    menu.h \
     smtp.h
 
 FORMS += \
         login.ui \
-        mainwindow.ui
+        mainwindow.ui \
+        menu.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

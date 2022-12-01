@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "employe.h"
+#include "arduino.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -15,6 +17,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void update_label();
+
 
 private slots:
     void on_pb_Ajouter_clicked();
@@ -41,11 +45,14 @@ private slots:
 
     void on_pushButton_envoyer_clicked();
 
+    void test();
+
 private:
     Ui::MainWindow *ui;
 
     employe E;
-
+    Arduino A;
+    QByteArray data; // variable contenant les données reçues
 };
 
 #endif // MAINWINDOW_H

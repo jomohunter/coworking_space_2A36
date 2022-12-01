@@ -5,6 +5,8 @@
 #include "connection.h"
 #include <QMessageBox>
 #include <QDebug>
+#include "menu.h"
+
 
 login::login(QWidget *parent) :
     QDialog(parent),
@@ -19,11 +21,11 @@ login::~login()
 }
 
 
-
+//74 auth nbaddel assemi
 
 void login::on_pb_seconnecter_clicked()
 {
-   // MainWindow m(nullptr);
+   // menu m(nullptr);
     Connection  c;
     QString nom=ui->nom->text();;
     int loginn=ui->password->text().toInt();
@@ -33,10 +35,12 @@ void login::on_pb_seconnecter_clicked()
        QMessageBox::information(this,"Connexion","login et mdp correcte");
      qDebug()<< "Mot de passe et login correct";
      this->hide();
-     MainWindow* m = new MainWindow(this);
-     m->show();
-    }
+     m.show();
+   //  menu* me = new menu(this);
 
+   // m->show();
+
+}
     if(c.Authentification(loginn,nom)==0)
     {
       QMessageBox::critical(this,"Connexion","login et mdp incorrecte");

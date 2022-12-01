@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>menu</class>
+ <widget class="QDialog" name="menu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>637</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="menu_employee">
+   <property name="geometry">
+    <rect>
+     <x>363</x>
+     <y>190</y>
+     <width>181</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+boder-width:5px;
+    border-style: outset;
+    border-radius: 10px;
+ </string>
+   </property>
+   <property name="text">
+    <string>GESTION DES EMPLOYEES</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="menu_Ffournisseurs">
+   <property name="geometry">
+    <rect>
+     <x>363</x>
+     <y>340</y>
+     <width>181</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+    border-style: outset;
+    border-radius: 10px;
+ </string>
+   </property>
+   <property name="text">
+    <string>GESTION DES FOURNISSEURS</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>130</y>
+     <width>120</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myanmar Text</family>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>MENU</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::PlainText</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="menu_sponsor">
+   <property name="geometry">
+    <rect>
+     <x>363</x>
+     <y>290</y>
+     <width>181</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+    border-style: outset;
+    border-radius: 10px;
+ </string>
+   </property>
+   <property name="text">
+    <string>GESTION DES SPONSORS</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="menu_customers">
+   <property name="geometry">
+    <rect>
+     <x>363</x>
+     <y>240</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+    border-style: outset;
+    border-radius: 10px;
+ </string>
+   </property>
+   <property name="text">
+    <string>GESTION DES CLIENTS</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="menu_reservations">
+   <property name="geometry">
+    <rect>
+     <x>363</x>
+     <y>390</y>
+     <width>181</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+    border-style: outset;
+    border-radius: 10px;
+ </string>
+   </property>
+   <property name="text">
+    <string>GESTION DES RESERVATIONS</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>50</y>
+     <width>871</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/projetcppback.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="menu_equipements">
+   <property name="geometry">
+    <rect>
+     <x>363</x>
+     <y>440</y>
+     <width>181</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+    border-style: outset;
+    border-radius: 10px;
+ </string>
+   </property>
+   <property name="text">
+    <string>GESTION DES EQUIPEMENTS</string>
+   </property>
+  </widget>
+  <zorder>label_4</zorder>
+  <zorder>menu_employee</zorder>
+  <zorder>menu_Ffournisseurs</zorder>
+  <zorder>label</zorder>
+  <zorder>menu_sponsor</zorder>
+  <zorder>menu_customers</zorder>
+  <zorder>menu_reservations</zorder>
+  <zorder>menu_equipements</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
