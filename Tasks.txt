@@ -3,4 +3,6 @@
     [ ✅] etude de lexistant/ charte graphique
     [ ✅] finaliser cahier de charge
     [ ✅] CRUD
-    [ ] Metiter
+    [ ✅ ] Metiter
+    [ ✅] integration avec rania
+
